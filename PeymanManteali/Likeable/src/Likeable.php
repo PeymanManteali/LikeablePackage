@@ -18,6 +18,8 @@ trait likeable
     {
         if ($this->isLiked()) {
             return null;
+        }elseif($this->isDisliked()){
+            $this->removeDislike();
         }
         return $this->likes()->create([
             'user_id' => Auth::user(),
@@ -27,6 +29,11 @@ trait likeable
 
     public function dislike()
     {
+        if ($this->isDisliked()) {
+            return null;
+        }elseif($this->isLiked()){
+            $this->removeLike();
+        }
         return $this->likes()->create([
             'user_id' => Auth::user(),
             'vote' => 0
@@ -35,32 +42,30 @@ trait likeable
 
     public function isLiked()
     {
-        return $like = $this->likes()->where('user_id', Auth::user())
+        return $this->likes()->where('user_id', Auth::user())
                 ->where('vote', 1)
                 ->firstOrFail() ?? false;
     }
 
     public function isDisliked()
     {
-        return $like = $this->likes()->where('user_id', Auth::user())
+        return $this->likes()->where('user_id', Auth::user())
                 ->where('vote', 0)
                 ->firstOrFail() ?? false;
     }
 
     public function removeLike()
     {
-        $like = $this->isLiked();
-        if ($like) {
-            return $like->delete();
+        if ($this->isLiked()) {
+            return $this->isLiked()->delete();
         }
         return false;
     }
 
     public function removeDislike()
     {
-        $dislike = $this->isDisliked();
-        if ($dislike) {
-            return $dislike->delete();
+        if ($this->isDisliked()) {
+            return $this->isDisliked()->delete();
         }
         return false;
     }
