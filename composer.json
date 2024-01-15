@@ -7,12 +7,24 @@
             "PeymanManteali\\Likeable\\": "src/"
         }
     },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "PeymanManteali\\Likeable\\LikeableServiceProvider"
+            ]
+        }
+    },
     "authors": [
         {
             "name": "peyman manteali",
             "email": "peyman.manteali@gmail.com"
         }
     ],
-    "minimum-stability": "stable",
-    "require": {}
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.5.0",
+        "laravel": ">=8",
+        "illuminate/database": ">=5.0",
+        "illuminate/support": ">=5.0"
+    }
 }

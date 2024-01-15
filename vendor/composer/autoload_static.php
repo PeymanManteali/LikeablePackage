@@ -16,7 +16,7 @@ class ComposerStaticInit0dd7314666a1516056c87fc5c27bd7d7
     public static $prefixDirsPsr4 = array (
         'PeymanManteali\\Likeable\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/src',
+            0 => __DIR__ . '/../..' . '/packages/PeymanManteali/Likeable/src',
         ),
     );
 
