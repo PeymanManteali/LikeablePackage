@@ -47,7 +47,7 @@ trait likeable
                 ->firstOrFail() ?? false;
     }
 
-    public function revokeLike()
+    public function removeLike()
     {
         $like = $this->isLiked();
         if ($like) {
@@ -56,7 +56,7 @@ trait likeable
         return false;
     }
 
-    public function revokeDislike()
+    public function removeDislike()
     {
         $dislike = $this->isDisliked();
         if ($dislike) {

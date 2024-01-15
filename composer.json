@@ -1,4 +1,5 @@
 {
+
     "name": "peyman-manteali/likeable",
     "description": "use likeable in laravel",
     "type": "metapackage",
@@ -22,9 +23,8 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "php": ">=5.5.0",
-        "laravel": ">=8",
+        "php": ">=8.2.0",
         "illuminate/database": ">=5.0",
-        "illuminate/support": ">=5.0"
+        "illuminate/support": ">=5.0",
     }
 }
