@@ -2,7 +2,14 @@
 
     "name": "peyman-manteali/likeable",
     "description": "use likeable in laravel",
-    "type": "metapackage",
+    "license": "MIT",
+    "keywords": ["Laravel", "Likeable", "Laravel Likeable"],
+    "authors": [
+        {
+            "name": "peyman manteali",
+            "email": "peyman.manteali@gmail.com"
+        }
+    ],
     "autoload": {
         "psr-4": {
             "PeymanManteali\\Likeable\\": "src/"
@@ -15,12 +22,6 @@
             ]
         }
     },
-    "authors": [
-        {
-            "name": "peyman manteali",
-            "email": "peyman.manteali@gmail.com"
-        }
-    ],
     "minimum-stability": "dev",
     "require": {
         "php": ">=8.2.0",
