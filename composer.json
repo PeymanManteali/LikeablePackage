@@ -12,7 +12,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "PeymanManteali\\Likeable\\": "src/"
+            "PeymanManteali\\Likeable\\": "PeymanManteali/Likeable/src/"
         }
     },
     "extra": {
