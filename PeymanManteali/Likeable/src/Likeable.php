@@ -22,7 +22,7 @@ trait likeable
             $this->removeDislike();
         }
         return $this->likes()->create([
-            'user_id' => Auth::user(),
+            'user_id' => Auth::user()->id,
             'vote' => 1
         ]);
     }
@@ -35,23 +35,23 @@ trait likeable
             $this->removeLike();
         }
         return $this->likes()->create([
-            'user_id' => Auth::user(),
+            'user_id' => Auth::user()->id,
             'vote' => 0
         ]);
     }
 
     public function isLiked()
     {
-        return $this->likes()->where('user_id', Auth::user())
+        return $this->likes()->where('user_id', Auth::user()->id)
                 ->where('vote', 1)
-                ->firstOrFail() ?? false;
+                ->first();
     }
 
     public function isDisliked()
     {
-        return $this->likes()->where('user_id', Auth::user())
+        return $this->likes()->where('user_id', Auth::user()->id)
                 ->where('vote', 0)
-                ->firstOrFail() ?? false;
+                ->first();
     }
 
     public function removeLike()
