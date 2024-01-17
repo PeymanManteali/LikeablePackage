@@ -11,7 +11,7 @@ composer require peyman-manteali/likeable
 ## Usage
 
 ```php
-class post extends Model
+class Post extends Model
 {
     use PeymanManteali\Likeable
 }
