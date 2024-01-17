@@ -7,12 +7,13 @@ use Illuminate\Support\Facades\Auth;
 /**
  * @method morphMany(string $class, string $string)
  */
-trait likeable
+trait Likeable
 {
     public function likes()
     {
         return $this->morphMany(Like::class, 'likeable');
     }
+
 
     public function like()
     {
@@ -82,5 +83,15 @@ trait likeable
         return $this->likes()
             ->where('vote', 0)
             ->count();
+    }
+
+    public static function likedBy($userId)
+    {
+        return Like::where('user_id', $userId)->where('vote', 1)->get();
+    }
+
+    public static function dislikedBy($userId)
+    {
+        return Like::where('user_id', $userId)->where('vote', 0)->get();
     }
 }
