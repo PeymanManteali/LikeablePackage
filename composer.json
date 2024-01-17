@@ -1,7 +1,7 @@
 {
 
-    "name": "peyman-manteali/likeable",
-    "description": "use likeable in laravel",
+    "name": "peyman.manteali/likeable",
+    "description": "implementation likeable service for laravel project",
     "license": "MIT",
     "keywords": ["Laravel", "Likeable", "Laravel Likeable"],
     "authors": [

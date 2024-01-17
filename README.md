@@ -1,11 +1,15 @@
 # LikeablePackage
 for laravel  8.x  or above
-## Installation
 
+## Installation
 Use the package manager [composer](https://getcomposer.org) to install Likeable.
 
 ```bash
 composer require peyman-manteali/likeable
+```
+Run the migrations
+```bash
+php artisan migrate
 ```
 
 ## Usage
